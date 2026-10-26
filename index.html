@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sérénité d'Arabie : oasis, monts paisibles et dunes dorées </title>
+    <link rel="icon" type="image/png" href="https://api.mytripplanner.fr/api/files/pbc_1321337024/47976eld0rscwbc/favicon_ytvg76obie.svg?thumb=100x100&token="/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée sous la douceur omanaise</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Élégance architecturale et parfums d'Orient</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Sources bienfaisantes et palmeraies ombragées</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Cité historique et marché d'artisanat</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Havre de paix suspendu et système falaj</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Silence d'or dans les sables de Wahiba</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Eaux turquoise et douceur maritime</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Tradition maritime et rivages préservés</a>
+            
+                <a href="#jour-9" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J9 Gouffre turquoise et retour vers Mascate</a>
+            
+                <a href="#jour-10" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J10 Rencontre marine et envol vers Paris</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">OMAN</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">Sérénité d'Arabie : oasis, monts paisibles et dunes dorées</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ 10 jours</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 Environ 1 580 €/personne</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 7h30 depuis Paris, france</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+        <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+        </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée sous la douceur omanaise</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un voyage reposant depuis Paris, découvrez les premiers charmes de Mascate baignée de lumières chaudes.
+Prenez possession de votre véhicule avant de rejoindre votre hôtel pour un repos bien mérité.
+En fin de journée, faites vos premiers pas le long de la paisible corniche portuaire bordée de falaises ocres.
+Laissez-vous envoûter par l'odeur suave de l'encens qui s'échappe doucement des ruelles marchandes.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🛬 Accueil à Mascate</strong>: Atterrissage à l'aéroport international et récupération sereine de votre SUV de location.</li><li><strong>🚶‍♂️ Flânerie sur la Corniche</strong>: Balade contemplative en fin d'après-midi le long du front de mer de Mutrah au son des vagues.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Arrivée sereine</p>
+                                <p class="text-gray-700">Le passage aux douanes omanaises est très fluide avec un e-visa préalablement validé en ligne.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Élégance architecturale et parfums d'Orient</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Consacrez cette matinée à la visite silencieuse et majestueuse du chef-d'œuvre de marbre blanc de la capitale.
+L'après-midi invite à une déambulation ombragée et feutrée dans les souks parfumés de myrrhe et d'argent.
+Admirez le raffinement de l'Opéra Royal, véritable fleuron de la culture contemporaine omanaise.
+Une journée sans précipitation, ponctuée de haltes savoureuses autour d'un thé à la cardamome.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🕌 Grande Mosquée Sultan Qaboos</strong>: Émerveillez-vous devant l'immense tapis persan tissé à la main et les lustres monumentaux en cristal.</li><li><strong>🛍️ Déambulation au Souq de Mutrah</strong>: Parcourez les venelles abritées où s'exhalent les volutes d'encens précieux et de pashminas soyeux.</li><li><strong>🎭 Visite de l'Opéra Royal</strong>: Admirez l'élégance du bois de teck sculpté et l'harmonieuse architecture arabo-islamique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👗 Tenue respectueuse</p>
+                                <p class="text-gray-700">Pour la Grande Mosquée, les bras et jambes doivent être couverts, et les femmes doivent porter un foulard sur la tête.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sources bienfaisantes et palmeraies ombragées</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez la capitale côtière pour vous enfoncer au cœur des vergers verdoyants de la région de Batinah.
+Le fort de Nakhal veille fièrement sur une immense palmeraie adossée aux premiers contreforts du Djebel.
+À quelques pas, délassez-vous aux sources chaudes naturelles d'Ain Thowarah dans un cadre bucolique.
+Une journée axée sur la déconnexion végétale et le murmure apaisant de l'eau vive.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏰 Fort de Nakhal</strong>: Visite paisible de cette forteresse érigée sur un piton rocheux offrant une vue panoramique sur les dattiers.</li><li><strong>♨️ Sources chaudes d'Ain Thowarah</strong>: Trempez vos pieds dans les bassins d'eau tiède naturelle où de petits poissons nettoyeurs viennent vous relaxer.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦶 Pédicure naturelle</p>
+                                <p class="text-gray-700">Laissez vos pieds immobiles dans le ruisseau d'Ain Thowarah pour profiter d'un massage doux et naturel offert par les poissons garra rufa.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cité historique et marché d'artisanat</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Traversez des paysages minéraux calmes pour rejoindre Nizwa, l'ancienne capitale culturelle et religieuse.
+Montez au sommet de la tour ronde du fort pour contempler un océan infini de palmiers dattiers.
+Flânez entre les étals des potiers, des ferronniers et des marchands d'épices du souk attenant.
+Terminez l'après-midi en dégustant le fameux halwa omanais tout juste sorti des chaudrons de cuivre.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏰 Fort de Nizwa</strong>: Découverte de l'immense tour défensive circulaire et de ses cours intérieures fleuries.</li><li><strong>🏺 Marché traditionnel de Nizwa</strong>: Promenade détendue dans les échoppes d'argile, d'argent ouvragé et de délicieuses dattes fraîches.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍯 Gourmandise</p>
+                                <p class="text-gray-700">Nizwa abrite les meilleurs ateliers de confection de halwa, une confiserie fondante au safran, eau de rose et amandes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Havre de paix suspendu et système falaj</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Prenez de la hauteur vers le charmant village de pierres de Misfat Al Abriyeen accroché à flanc de ravin.
+Ici, le temps semble suspendu au rythme de l'eau qui s'écoule silencieusement dans les canaux d'irrigation ancestraux.
+Offrez-vous une marche douce et ombragée sous les grenadiers, papayers et bananiers luxuriants.
+Profitez d'un coucher de soleil serein depuis une terrasse en terre crue face à la vallée.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🚶‍♀️ Balade le long du Falaj</strong>: Promenade plate et facile au son de l'eau cristalline parcourant les jardins en terrasses.</li><li><strong>☕ Pause thé sur les toits</strong>: Dégustation d'un café omanais parfumé aux graines de cardamome en contemplant la gorge verdoyante.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💧 Génie écologique</p>
+                                <p class="text-gray-700">Les falajs omanais, inscrits à l'UNESCO, distribuent équitablement l'eau des montagnes depuis des siècles sans aucune pompe électrique.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Silence d'or dans les sables de Wahiba</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Prenez la route vers les grands espaces immaculés du désert des Wahiba Sands.
+Installez-vous dans un campement de tentes traditionnelles tout confort niché entre deux cordons dunaires.
+Le silence absolu du désert vous invite à la méditation et au lâcher-prise total loin de toute agitation.
+En soirée, admirez les nuances pourpres du ciel étoilé réputé pour sa pureté exceptionnelle.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛺ Installation au camp du désert</strong>: Accueil traditionnel avec café aux dattes et installation dans un cadre chaleureux et feutré.</li><li><strong>🌅 Contemplation du coucher de soleil</strong>: Ascension facile d'une crête dunaire pour admirer le soleil s'éteindre sur les vagues de sable cuivré.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🌌 Nuit magique</p>
+                                <p class="text-gray-700">L'absence de pollution lumineuse offre une vue splendide sur la Voie lactée, idéale pour observer les étoiles filantes emmitouflé dans un plaid.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Eaux turquoise et douceur maritime</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Quittez les sables chauds pour rejoindre l'oasis paradisiaque et très accessible de Wadi Bani Khalid.
+Profitez d'une baignade d'une douceur inégalée dans de vastes bassins naturels couleur émeraude bordés de pontons en bois.
+Reprenez la route sans encombre en direction de la paisible ville côtière de Sur.
+Installez-vous en bord de mer pour respirer la fraîche brise du golfe d'Oman au crépuscule.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🏊 Baignade à Wadi Bani Khalid</strong>: Détente absolue dans des piscines naturelles limpides et d'accès très aisé sans effort physique.</li><li><strong>🚗 Route panoramique vers Sur</strong>: Trajet reposant serpentant entre contreforts rocheux et rivages étincelants.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🏊‍♂️ Conseil baignade</p>
+                                <p class="text-gray-700">Par respect pour les coutumes locales, prévoyez un tee-shirt et un short de bain couvrant pour vous baigner dans le wadi.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Tradition maritime et rivages préservés</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Réveillez-vous au rythme de la mer dans le port historique où étaient construits les navires de Sinbad le Marin.
+Découvrez le savoir-faire méticuleux des artisans charpentiers qui assemblent encore le bois sans le moindre clou.
+Baladez-vous le long de la lagune jusqu'au phare immaculé du quartier traditionnel d'Al Ayjah.
+Profitez de l'après-midi pour une halte contemplative face à l'immensité de l'océan Indien.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>⛵ Chantier naval des boutres</strong>: Observation tranquille de la fabrication artisanale des célèbres voiliers en bois d'Oman.</li><li><strong>📸 Phare d'Al Ayjah</strong>: Promenade douce autour de la tour blanche gardant la passe marine et des vieilles maisons de pêcheurs.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🧭 Légende marine</p>
+                                <p class="text-gray-700">Les navigateurs de Sur sillonnaient autrefois les routes maritimes jusqu'à Zanzibar et l'Inde sans instruments modernes.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-9" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 9</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Gouffre turquoise et retour vers Mascate</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Empruntez la magnifique route côtière en direction de la capitale entre monts escarpés et plages sauvages.
+Faites escale au fascinant gouffre de Bimmah, un cratère naturel aux eaux turquoise niché dans un parc verdoyant.
+Savourez un pique-nique ou un jus de fruits frais en bordure des galets blancs de la plage de Fins.
+Retrouvez Mascate en fin d'après-midi pour une soirée paisible face à la marina.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>💧 Gouffre de Bimmah</strong>: Balade aménagée autour de cette spectaculaire doline d'eau saline et trempage relaxant des pieds.</li><li><strong>🏖️ Pause côtière à Fins Beach</strong>: Moment de contemplation face aux falaises blanches et aux nuances d'azur de la mer.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour9.jpg" class="w-full h-64 object-cover" alt="Jour 9">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">☄️ Légende du gouffre</p>
+                                <p class="text-gray-700">Les habitants locaux appellent Bimmah "Hawiyat Najm" (le puits de l'étoile filante), croyant qu'un éclat de météorite a façonné ce cratère.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-10" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 10</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Rencontre marine et envol vers Paris</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Terminez ce séjour enchanteur par une douce sortie en mer le long des criques rocheuses de Mascate.
+Admirez le ballet naturel des bancs de dauphins sauvages qui aiment escorter les embarcations au large.
+Prenez le temps d'acheter les dernières douceurs et flacons d'eau de rose pour prolonger le voyage.
+Rejoignez l'aéroport l'esprit apaisé pour votre vol retour vers Paris.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li><strong>🐬 Croisière d'observation des dauphins</strong>: Navigation tranquille de deux heures dans le golfe pour admirer les dauphins évoluant en liberté.</li><li><strong>🛫 Envol vers Paris</strong>: Restitution sereine du véhicule à l'aéroport et embarquement pour la France.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Oman-ej6c5j15928d7y8/main/jour10.jpg" class="w-full h-64 object-cover" alt="Jour 10">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🛍️ Souvenirs raffinés</p>
+                                <p class="text-gray-700">Pensez à rapporter un flacon de parfum Amouage ou de l'encens royal du Dhofar pour embaumer votre intérieur.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+        </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛬 Budget vol: </strong>A partir de 417 €/pers</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🚆 Budget transports: </strong>260 €/pers (location SUV confortable & carburant économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥗 Budget repas: </strong>240 €/pers (restaurants traditionnels et salons de thé)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🛏️ Budget logement: </strong>570 €/pers (hôtels 3* de charme et camp bédouin soigné)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🎭 Budget activités: </strong>93 €/pers (croisière dauphins, entrées de forts et musées)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Novembre à Mars (températures très douces de 22 à 28°C)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">☀️ En mars, les journées sont ensoleillées et agréables (24-28°C). Prévoyez des vêtements légers en lin et une petite laine pour les nuits fraîches dans le désert.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La monnaie est le Rial omanais (OMR). Les cartes bancaires sont acceptées partout, gardez quelques rials pour les petits souks et achats d'artisanat.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🚗 Le permis de conduire français suffit pour louer un véhicule. La conduite est à droite sur un réseau routier impeccable et très calme.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">📶 Optez pour une eSIM locale (Omantel ou Ooredoo) à l'aéroport pour une excellente connectivité 4G/5G sur l'ensemble du territoire.</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Anecdotes
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>💡 Le pays des voitures étincelantes:</strong> À Oman, rouler avec une voiture trop sale est passible d'une amende ! Les Omanais mettent un point d'honneur à garder leurs véhicules immaculés, symbole de respect et de propreté.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🙃 Un arbre plus précieux que l'or:</strong> Pendant l'Antiquité, l'encens extrait de l'arbre Boswellia dans le sud du pays était tellement prisé par les pharaons et les empereurs romains qu'il valait littéralement son poids en or pur.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Spécialités culinaires
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🍴 Le Shuwa:</strong> undefined</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>🥘 Le Majboos:</strong> undefined</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>☕ Le Kahwa et Halwa:</strong> undefined</p>
+                
+            </div>            
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Oman-ej6c5j15928d7y8/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.kayak.fr/flights/CDG-MCT/2027-03-09/2027-03-18" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🛬 Réserve ton vol</strong></a></li>
+                    
+                        <li><a href="https://experienceoman.om/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Experience Oman</strong></a></li>
+                    
+                        <li><a href="https://www.accuweather.com/fr/om/muscat/259207/weather-forecast/259207" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ AccuWeather Mascate</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+        
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
