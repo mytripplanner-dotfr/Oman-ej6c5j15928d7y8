@@ -1,0 +1,398 @@
+{
+  "pays": "Oman",
+  "drapeau": "🇴🇲",
+  "symbole": "🕌",
+  "titre": "Sérénité d'Arabie : oasis, monts paisibles et dunes dorées",
+  "budget_total": "Environ 1 580 €/personne",
+  "duree": "10 jours",
+  "temps_vol": "7h30 depuis Paris, france",
+  "escale": "0",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée sous la douceur omanaise",
+      "legende": "Après un voyage reposant depuis Paris, découvrez les premiers charmes de Mascate baignée de lumières chaudes.\nPrenez possession de votre véhicule avant de rejoindre votre hôtel pour un repos bien mérité.\nEn fin de journée, faites vos premiers pas le long de la paisible corniche portuaire bordée de falaises ocres.\nLaissez-vous envoûter par l'odeur suave de l'encens qui s'échappe doucement des ruelles marchandes.",
+      "lieu": "Mascate",
+      "activites": [
+        "<strong>🛬 Accueil à Mascate</strong>: Atterrissage à l'aéroport international et récupération sereine de votre SUV de location.",
+        "<strong>🚶‍♂️ Flânerie sur la Corniche</strong>: Balade contemplative en fin d'après-midi le long du front de mer de Mutrah au son des vagues."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Mutrah Corniche, Mascate",
+          "categorie": "Promenade",
+          "coords": { "lat": 23.6264, "lng": 58.567 }
+        }
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Arrivée sereine",
+          "texte": "Le passage aux douanes omanaises est très fluide avec un e-visa préalablement validé en ligne."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🕌",
+      "titre": "Élégance architecturale et parfums d'Orient",
+      "legende": "Consacrez cette matinée à la visite silencieuse et majestueuse du chef-d'œuvre de marbre blanc de la capitale.\nL'après-midi invite à une déambulation ombragée et feutrée dans les souks parfumés de myrrhe et d'argent.\nAdmirez le raffinement de l'Opéra Royal, véritable fleuron de la culture contemporaine omanaise.\nUne journée sans précipitation, ponctuée de haltes savoureuses autour d'un thé à la cardamome.",
+      "lieu": "Mascate",
+      "activites": [
+        "<strong>🕌 Grande Mosquée Sultan Qaboos</strong>: Émerveillez-vous devant l'immense tapis persan tissé à la main et les lustres monumentaux en cristal.",
+        "<strong>🛍️ Déambulation au Souq de Mutrah</strong>: Parcourez les venelles abritées où s'exhalent les volutes d'encens précieux et de pashminas soyeux.",
+        "<strong>🎭 Visite de l'Opéra Royal</strong>: Admirez l'élégance du bois de teck sculpté et l'harmonieuse architecture arabo-islamique."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Grande Mosquée Sultan Qaboos, Mascate",
+          "categorie": "Monument religieux",
+          "coords": { "lat": 23.5838, "lng": 58.3887 }
+        },
+        {
+          "nom_recherche": "Mutrah Souq, Mascate",
+          "categorie": "Marché",
+          "coords": { "lat": 23.6247, "lng": 58.5645 }
+        },
+        {
+          "nom_recherche": "Royal Opera House, Mascate",
+          "categorie": "Culture",
+          "coords": { "lat": 23.6143, "lng": 58.4687 }
+        }
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "👗",
+          "titre": "Tenue respectueuse",
+          "texte": "Pour la Grande Mosquée, les bras et jambes doivent être couverts, et les femmes doivent porter un foulard sur la tête."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🌴",
+      "titre": "Sources bienfaisantes et palmeraies ombragées",
+      "legende": "Quittez la capitale côtière pour vous enfoncer au cœur des vergers verdoyants de la région de Batinah.\nLe fort de Nakhal veille fièrement sur une immense palmeraie adossée aux premiers contreforts du Djebel.\nÀ quelques pas, délassez-vous aux sources chaudes naturelles d'Ain Thowarah dans un cadre bucolique.\nUne journée axée sur la déconnexion végétale et le murmure apaisant de l'eau vive.",
+      "lieu": "Nakhal",
+      "activites": [
+        "<strong>🏰 Fort de Nakhal</strong>: Visite paisible de cette forteresse érigée sur un piton rocheux offrant une vue panoramique sur les dattiers.",
+        "<strong>♨️ Sources chaudes d'Ain Thowarah</strong>: Trempez vos pieds dans les bassins d'eau tiède naturelle où de petits poissons nettoyeurs viennent vous relaxer."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Fort de Nakhal, Nakhal",
+          "categorie": "Monument historique",
+          "coords": { "lat": 23.3951, "lng": 57.8291 }
+        },
+        {
+          "nom_recherche": "Ain Thowarah, Nakhal",
+          "categorie": "Source naturelle",
+          "coords": { "lat": 23.3762, "lng": 57.8286 }
+        }
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🦶",
+          "titre": "Pédicure naturelle",
+          "texte": "Laissez vos pieds immobiles dans le ruisseau d'Ain Thowarah pour profiter d'un massage doux et naturel offert par les poissons garra rufa."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏺",
+      "titre": "Cité historique et marché d'artisanat",
+      "legende": "Traversez des paysages minéraux calmes pour rejoindre Nizwa, l'ancienne capitale culturelle et religieuse.\nMontez au sommet de la tour ronde du fort pour contempler un océan infini de palmiers dattiers.\nFlânez entre les étals des potiers, des ferronniers et des marchands d'épices du souk attenant.\nTerminez l'après-midi en dégustant le fameux halwa omanais tout juste sorti des chaudrons de cuivre.",
+      "lieu": "Nizwa",
+      "activites": [
+        "<strong>🏰 Fort de Nizwa</strong>: Découverte de l'immense tour défensive circulaire et de ses cours intérieures fleuries.",
+        "<strong>🏺 Marché traditionnel de Nizwa</strong>: Promenade détendue dans les échoppes d'argile, d'argent ouvragé et de délicieuses dattes fraîches."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Fort de Nizwa, Nizwa",
+          "categorie": "Monument historique",
+          "coords": { "lat": 22.9333, "lng": 57.5303 }
+        },
+        {
+          "nom_recherche": "Nizwa Souq, Nizwa",
+          "categorie": "Marché",
+          "coords": { "lat": 22.9337, "lng": 57.5317 }
+        }
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🍯",
+          "titre": "Gourmandise",
+          "texte": "Nizwa abrite les meilleurs ateliers de confection de halwa, une confiserie fondante au safran, eau de rose et amandes."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🌿",
+      "titre": "Havre de paix suspendu et système falaj",
+      "legende": "Prenez de la hauteur vers le charmant village de pierres de Misfat Al Abriyeen accroché à flanc de ravin.\nIci, le temps semble suspendu au rythme de l'eau qui s'écoule silencieusement dans les canaux d'irrigation ancestraux.\nOffrez-vous une marche douce et ombragée sous les grenadiers, papayers et bananiers luxuriants.\nProfitez d'un coucher de soleil serein depuis une terrasse en terre crue face à la vallée.",
+      "lieu": "Misfat Al Abriyeen",
+      "activites": [
+        "<strong>🚶‍♀️ Balade le long du Falaj</strong>: Promenade plate et facile au son de l'eau cristalline parcourant les jardins en terrasses.",
+        "<strong>☕ Pause thé sur les toits</strong>: Dégustation d'un café omanais parfumé aux graines de cardamome en contemplant la gorge verdoyante."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Misfat al Abriyeen, Al Hamra",
+          "categorie": "Village traditionnel",
+          "coords": { "lat": 23.1389, "lng": 57.3106 }
+        }
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "💧",
+          "titre": "Génie écologique",
+          "texte": "Les falajs omanais, inscrits à l'UNESCO, distribuent équitablement l'eau des montagnes depuis des siècles sans aucune pompe électrique."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🐪",
+      "titre": "Silence d'or dans les sables de Wahiba",
+      "legende": "Prenez la route vers les grands espaces immaculés du désert des Wahiba Sands.\nInstallez-vous dans un campement de tentes traditionnelles tout confort niché entre deux cordons dunaires.\nLe silence absolu du désert vous invite à la méditation et au lâcher-prise total loin de toute agitation.\nEn soirée, admirez les nuances pourpres du ciel étoilé réputé pour sa pureté exceptionnelle.",
+      "lieu": "Wahiba Sands",
+      "activites": [
+        "<strong>⛺ Installation au camp du désert</strong>: Accueil traditionnel avec café aux dattes et installation dans un cadre chaleureux et feutré.",
+        "<strong>🌅 Contemplation du coucher de soleil</strong>: Ascension facile d'une crête dunaire pour admirer le soleil s'éteindre sur les vagues de sable cuivré."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Sharqiya Sands, Bidiya",
+          "categorie": "Désert",
+          "coords": { "lat": 22.398, "lng": 58.7845 }
+        }
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "🌌",
+          "titre": "Nuit magique",
+          "texte": "L'absence de pollution lumineuse offre une vue splendide sur la Voie lactée, idéale pour observer les étoiles filantes emmitouflé dans un plaid."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "💦",
+      "titre": "Eaux turquoise et douceur maritime",
+      "legende": "Quittez les sables chauds pour rejoindre l'oasis paradisiaque et très accessible de Wadi Bani Khalid.\nProfitez d'une baignade d'une douceur inégalée dans de vastes bassins naturels couleur émeraude bordés de pontons en bois.\nReprenez la route sans encombre en direction de la paisible ville côtière de Sur.\nInstallez-vous en bord de mer pour respirer la fraîche brise du golfe d'Oman au crépuscule.",
+      "lieu": "Wadi Bani Khalid",
+      "activites": [
+        "<strong>🏊 Baignade à Wadi Bani Khalid</strong>: Détente absolue dans des piscines naturelles limpides et d'accès très aisé sans effort physique.",
+        "<strong>🚗 Route panoramique vers Sur</strong>: Trajet reposant serpentant entre contreforts rocheux et rivages étincelants."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Wadi Bani Khalid, Oman",
+          "categorie": "Oasis naturelle",
+          "coords": { "lat": 22.6105, "lng": 59.0924 }
+        }
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🏊‍♂️",
+          "titre": "Conseil baignade",
+          "texte": "Par respect pour les coutumes locales, prévoyez un tee-shirt et un short de bain couvrant pour vous baigner dans le wadi."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "⛵",
+      "titre": "Tradition maritime et rivages préservés",
+      "legende": "Réveillez-vous au rythme de la mer dans le port historique où étaient construits les navires de Sinbad le Marin.\nDécouvrez le savoir-faire méticuleux des artisans charpentiers qui assemblent encore le bois sans le moindre clou.\nBaladez-vous le long de la lagune jusqu'au phare immaculé du quartier traditionnel d'Al Ayjah.\nProfitez de l'après-midi pour une halte contemplative face à l'immensité de l'océan Indien.",
+      "lieu": "Sur",
+      "activites": [
+        "<strong>⛵ Chantier naval des boutres</strong>: Observation tranquille de la fabrication artisanale des célèbres voiliers en bois d'Oman.",
+        "<strong>📸 Phare d'Al Ayjah</strong>: Promenade douce autour de la tour blanche gardant la passe marine et des vieilles maisons de pêcheurs."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Chantier naval de boutres, Sur",
+          "categorie": "Artisanat",
+          "coords": { "lat": 22.5695, "lng": 59.5314 }
+        },
+        {
+          "nom_recherche": "Al Ayjah Lighthouse, Sur",
+          "categorie": "Panorama",
+          "coords": { "lat": 22.5691, "lng": 59.5388 }
+        }
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "🧭",
+          "titre": "Légende marine",
+          "texte": "Les navigateurs de Sur sillonnaient autrefois les routes maritimes jusqu'à Zanzibar et l'Inde sans instruments modernes."
+        }
+      ]
+    },
+    {
+      "jour": 9,
+      "symbole": "🌊",
+      "titre": "Gouffre turquoise et retour vers Mascate",
+      "legende": "Empruntez la magnifique route côtière en direction de la capitale entre monts escarpés et plages sauvages.\nFaites escale au fascinant gouffre de Bimmah, un cratère naturel aux eaux turquoise niché dans un parc verdoyant.\nSavourez un pique-nique ou un jus de fruits frais en bordure des galets blancs de la plage de Fins.\nRetrouvez Mascate en fin d'après-midi pour une soirée paisible face à la marina.",
+      "lieu": "Mascate",
+      "activites": [
+        "<strong>💧 Gouffre de Bimmah</strong>: Balade aménagée autour de cette spectaculaire doline d'eau saline et trempage relaxant des pieds.",
+        "<strong>🏖️ Pause côtière à Fins Beach</strong>: Moment de contemplation face aux falaises blanches et aux nuances d'azur de la mer."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Bimmah Sinkhole, Bimmah",
+          "categorie": "Curiosité naturelle",
+          "coords": { "lat": 23.0361, "lng": 59.0717 }
+        }
+      ],
+      "illustration": "jour9.jpg",
+      "encarts": [
+        {
+          "symbole": "☄️",
+          "titre": "Légende du gouffre",
+          "texte": "Les habitants locaux appellent Bimmah \"Hawiyat Najm\" (le puits de l'étoile filante), croyant qu'un éclat de météorite a façonné ce cratère."
+        }
+      ]
+    },
+    {
+      "jour": 10,
+      "symbole": "🐬",
+      "titre": "Rencontre marine et envol vers Paris",
+      "legende": "Terminez ce séjour enchanteur par une douce sortie en mer le long des criques rocheuses de Mascate.\nAdmirez le ballet naturel des bancs de dauphins sauvages qui aiment escorter les embarcations au large.\nPrenez le temps d'acheter les dernières douceurs et flacons d'eau de rose pour prolonger le voyage.\nRejoignez l'aéroport l'esprit apaisé pour votre vol retour vers Paris.",
+      "lieu": "Mascate",
+      "activites": [
+        "<strong>🐬 Croisière d'observation des dauphins</strong>: Navigation tranquille de deux heures dans le golfe pour admirer les dauphins évoluant en liberté.",
+        "<strong>🛫 Envol vers Paris</strong>: Restitution sereine du véhicule à l'aéroport et embarquement pour la France."
+      ],
+      "points_interet": [
+        {
+          "nom_recherche": "Marina Bandar Al Rowdha, Mascate",
+          "categorie": "Port de plaisance",
+          "coords": { "lat": 23.5857, "lng": 58.6074 }
+        }
+      ],
+      "illustration": "jour10.jpg",
+      "encarts": [
+        {
+          "symbole": "🛍️",
+          "titre": "Souvenirs raffinés",
+          "texte": "Pensez à rapporter un flacon de parfum Amouage ou de l'encens royal du Dhofar pour embaumer votre intérieur."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "A partir de 417 €/pers",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "260 €/pers (location SUV confortable & carburant économique)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "240 €/pers (restaurants traditionnels et salons de thé)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "570 €/pers (hôtels 3* de charme et camp bédouin soigné)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "93 €/pers (croisière dauphins, entrées de forts et musées)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Novembre à Mars (températures très douces de 22 à 28°C)",
+      "symbole": "☀️"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "En mars, les journées sont ensoleillées et agréables (24-28°C). Prévoyez des vêtements légers en lin et une petite laine pour les nuits fraîches dans le désert.",
+      "symbole": "☀️"
+    },
+    {
+      "titre": "La monnaie est le Rial omanais (OMR). Les cartes bancaires sont acceptées partout, gardez quelques rials pour les petits souks et achats d'artisanat.",
+      "symbole": "💳"
+    },
+    {
+      "titre": "Le permis de conduire français suffit pour louer un véhicule. La conduite est à droite sur un réseau routier impeccable et très calme.",
+      "symbole": "🚗"
+    },
+    {
+      "titre": "Optez pour une eSIM locale (Omantel ou Ooredoo) à l'aéroport pour une excellente connectivité 4G/5G sur l'ensemble du territoire.",
+      "symbole": "📶"
+    }
+  ],
+  "infos_decallees": [
+    {
+      "symbole": "💡",
+      "titre": "Le pays des voitures étincelantes",
+      "texte": "À Oman, rouler avec une voiture trop sale est passible d'une amende ! Les Omanais mettent un point d'honneur à garder leurs véhicules immaculés, symbole de respect et de propreté."
+    },
+    {
+      "symbole": "🙃",
+      "titre": "Un arbre plus précieux que l'or",
+      "texte": "Pendant l'Antiquité, l'encens extrait de l'arbre Boswellia dans le sud du pays était tellement prisé par les pharaons et les empereurs romains qu'il valait littéralement son poids en or pur."
+    }
+  ],
+  "specialites_culinaires": [
+    {
+      "symbole": "🍴",
+      "titre": "Le Shuwa",
+      "description": "Plat de fête emblématique composé de viande d'agneau marinée aux épices locales, enveloppée dans des feuilles de palmier puis cuite à l'étouffée pendant 24 à 48 heures dans un four enterré sous terre."
+    },
+    {
+      "symbole": "🥘",
+      "titre": "Le Majboos",
+      "description": "Riz parfumé mijoté avec du safran, de la cardamome et des clous de girofle, délicatement servi avec du poulet fondant ou des poissons frais du golfe d'Oman."
+    },
+    {
+      "symbole": "☕",
+      "titre": "Le Kahwa et Halwa",
+      "description": "Le rituel d'hospitalité incontournable : un café léger infusé à la cardamome et à l'eau de rose, toujours accompagné de bouchées de halwa tiède aux amandes et de dattes fraîches."
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Vols",
+      "titre": "Réserve ton vol",
+      "url": "https://www.kayak.fr/flights/CDG-MCT/2027-03-09/2027-03-18",
+      "symbole": "🛬"
+    },
+    {
+      "legende": "Infos officielles et inspirations",
+      "titre": "Experience Oman",
+      "url": "https://experienceoman.om/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Météo locale",
+      "titre": "AccuWeather Mascate",
+      "url": "https://www.accuweather.com/fr/om/muscat/259207/weather-forecast/259207",
+      "symbole": "🌤️"
+    }
+  ]
+}
